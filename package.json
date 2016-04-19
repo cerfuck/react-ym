@@ -1,26 +1,22 @@
 {
   "name": "react-ym",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "React Yandex Metrika",
-  "main": "",
+  "main": "build/index.js",
+  "typings": "build/index.d.ts",
   "scripts": {
-    "build": "./node_modules/webpack/bin/webpack.js",
-    "build:prod": "NODE_ENV=production npm run build"
+    "build": "./node_modules/typescript/bin/tsc"
   },
   "files": [
-    "dist/"
+    "build"
+  ],
+  "moduleFileExtensions": [
+    "ts",
+    "js"
   ],
   "author": "Cerfuck",
   "license": "MIT",
   "devDependencies": {
-    "ts-loader": "^0.8.0",
-    "tslint": "^3.6.0",
-    "tslint-loader": "^2.1.0",
-    "typescript": "1.8.2",
-    "typings": "^0.7.12",
-    "webpack": "^1.12.12",
-    "webpack-dev-middleware": "^1.6.1",
-    "webpack-dev-server": "^1.14.1"
-  },
-  "typings": "./lib/react-ym.d.ts"
+    "typescript": "1.8.2"
+  }
 }
