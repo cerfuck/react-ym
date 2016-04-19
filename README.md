@@ -1,7 +1,6 @@
 # Yandex Metrika simple module for React
 
-This doesn't have any depency on react-router. You can use it with any router you like.
-See the example for how to use it with react-router
+You just need to import the ym in the index file and initialize with the id.
 
 ## How to use
 
