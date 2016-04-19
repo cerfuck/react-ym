@@ -1,4 +1,4 @@
-Yandex Metrika simple module for React
+# Yandex Metrika simple module for React
 
 This doesn't have any depency on react-router. You can use it with any router you like.
 See the example for how to use it with react-router
