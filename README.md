@@ -17,12 +17,11 @@ const { pathname, search, hash } = window.location;
 const location = `${pathname}${search}${hash}`;
 
 if (process.env.NODE_ENV === 'production') {
-  ga.initialize('UA-76791325-1');
-  ym.initialize('36942255');
+  ym.initialize('00000000');
 }
 
 let update = () => {
-  // may be send location
+  // then you need to update the window.location
 };
 
 match({ routes, location }, () => {
