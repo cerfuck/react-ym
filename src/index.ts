@@ -1,5 +1,1 @@
-function hello() {
-  console.error('hello');
-}
-
-hello();
+export * from './react-ym';
