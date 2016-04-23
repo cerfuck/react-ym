@@ -1,6 +1,8 @@
 export module ym {
-  let Ya;
   export function initialize(ymId?: string, options?: Object) {
+    if (!ymId) {
+      return;
+    }
     let customOptions: Object = {};
     let defaultOptions = {
       id: ymId,
@@ -12,12 +14,10 @@ export module ym {
       customOptions = options;
       customOptions['id'] = ymId;
     }
-    if (!ymId) {
-      return;
-    }
     (function (d, w, c) {
       (w[c] = w[c] || []).push(function() {
         try {
+          var Ya = w['Ya'];
           w[`yaCounter${ymId}`] = new Ya.Metrika(options ? customOptions :defaultOptions);
         } catch(e) { }
       });
