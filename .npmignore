@@ -1,0 +1,16 @@
+### IDE Files ###
+.idea
+*.iml
+.vscode
+
+### src ###
+/src
+.editorconfig
+.gitignore
+tsconfig.json
+tslint.json
+!/build/
+
+### NPM files ###
+/node_modules
+npm-debug.log
