@@ -1,6 +1,6 @@
 {
   "name": "react-ym",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "React Yandex Metrika",
   "main": "build/index.js",
   "typings": "build/index.d.ts",
