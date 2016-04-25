@@ -1,6 +1,7 @@
 # Yandex Metrika simple module for React
 
 You just need to import the ym in the index file and initialize with the id.
+In the module used  "TypeScript", which means that it will work in projects on TypeScript, but it can also be used in the JavaScript.
 
 ## How to use
 
