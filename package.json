@@ -1,6 +1,6 @@
 {
   "name": "react-ym",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "React Yandex Metrika",
   "keywords": ["yandex metrika", "react", "typescript"],
   "repository" : { "type" : "git", "url" : "https://github.com/cerfuck/react-ym"},
