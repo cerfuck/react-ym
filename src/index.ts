@@ -1,8 +1,11 @@
 export module ym {
-  export function initialize(ymId?: string, options?: Object) {
+  type versionType = 1 | 2
+
+  export function initialize(ymId?: string, options?: Object, version: versionType = 2) {
     if (!ymId) {
       return;
     }
+
     let customOptions: Object = {};
     let defaultOptions = {
       id: ymId,
@@ -18,7 +21,11 @@ export module ym {
       (w[c] = w[c] || []).push(function() {
         try {
           var Ya = w['Ya'];
-          w[`yaCounter${ymId}`] = new Ya.Metrika(options ? customOptions :defaultOptions);
+          if (version == 1) {
+            w[`yaCounter${ymId}`] = new Ya.Metrika(options ? customOptions :defaultOptions);
+          } else {
+            w[`yaCounter${ymId}`] = new Ya.Metrika2(options ? customOptions :defaultOptions);
+          }
         } catch(e) { }
       });
 
@@ -27,7 +34,12 @@ export module ym {
           f = function () { n.parentNode.insertBefore(s, n); };
       s.type = 'text/javascript';
       s.async = true;
-      s.src = 'https://mc.yandex.ru/metrika/watch.js';
+
+      if (version == 1) {
+        s.src = 'https://mc.yandex.ru/metrika/watch.js';
+      } else {
+        s.src = 'https://mc.yandex.ru/metrika/tag.js';
+      }
 
       if (w['opera'] == '[object Opera]') {
         d.addEventListener('DOMContentLoaded', f, false);

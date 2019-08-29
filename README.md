@@ -33,3 +33,9 @@ match({ routes, location }, () => {
   );
 });
 ```
+```js
+  import { ym } from 'react-ym';
+  
+  const ym_version = 1;
+  ym.initialize('00000000', { webvisor:true }, ym_version);
+```
